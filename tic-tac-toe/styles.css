@@ -1,0 +1,21 @@
+body {
+  background-color: lavender;
+}
+
+#board {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+table, tr, td {
+  border: 1px solid black;
+  height: 70px;
+  width: 140px;
+}
+
+#reset-game {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
