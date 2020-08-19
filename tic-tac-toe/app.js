@@ -3,15 +3,24 @@
 // the app detects a win or a tie and displays an appropriate message
 // a button resets the game for a new round of gameplay
 
+window.addEventListener('DOMContentLoaded', (event) => {
+  let board = document.querySelectorAll("td");
+  let currentPlayer;
 
-let board = document.querySelectorAll("td");
-let clickForPlayerX = function() {
-  this.innerHTML = 'X';
-  this.classList.add("fixInnerSpacing");
-  console.log(square);
-}
+  let makeMove = function() {
+    if(!currentPlayer) {
+      currentPlayer = 'X';
+    } else if (currentPlayer === 'X') {
+      currentPlayer = 'O';
+    } else {
+      currentPlayer = 'X';
+    }
+    this.innerHTML = currentPlayer;
+    this.classList.add("fixInnerSpacing");
+  }
 
-board.forEach((square) => {
-  square.addEventListener('click', clickForPlayerX);
-})
-console.log(board);
+  board.forEach((square) => {
+    square.addEventListener('click', makeMove);
+  })
+
+});

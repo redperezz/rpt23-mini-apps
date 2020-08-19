@@ -6,13 +6,13 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 200px;
-  height: 100px;
+  height: 220px;
 }
 
 table, tr, td {
   table-layout: fixed;
   border: 1px solid black;
-  height: 70px;
+  height: 120px;
   width: 120px;
 }
 
@@ -24,4 +24,4 @@ table, tr, td {
 
 .fixInnerSpacing {
   text-align: center;
-} 
+}
