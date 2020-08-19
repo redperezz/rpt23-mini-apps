@@ -5,11 +5,13 @@
 
 
 let board = document.querySelectorAll("td");
-let clickForPlayerX = function(square) {
+let clickForPlayerX = function() {
+  this.innerHTML = 'X';
+  this.classList.add("fixInnerSpacing");
   console.log(square);
 }
 
 board.forEach((square) => {
-  square.addEventListener('click', clickForPlayerX)
+  square.addEventListener('click', clickForPlayerX);
 })
 console.log(board);
